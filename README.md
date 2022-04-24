@@ -1,16 +1,8 @@
 # mobile_seoul_soul
 
-A new Flutter project.
+A mobile kpop merchandise store for a course in CIIT College of Arts and Technology made using Flutter.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Nadji Tan](https://github.com/Kapatid) (Kapatid) - Frontend
+- [Jeremy Habal](https://github.com/J-Habal) (J-Habal) - UI/UX Design
+- [Gabriel Verceles](https://github.com/Koruuin) (Koruuin) - Frontend & Documentation
+- [Jerwin Fabelico](https://github.com/Omni-ssiah) (Omni-ssiah) - Frontend & Documentation
