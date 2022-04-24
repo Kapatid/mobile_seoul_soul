@@ -1,4 +1,4 @@
-# mobile_seoul_soul
+# Mobile Seoul Soul App
 
 A mobile kpop merchandise store for a course in CIIT College of Arts and Technology made using Flutter.
 
