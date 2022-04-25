@@ -114,13 +114,13 @@ class _ProductsGridState extends State<ProductsGrid> {
         ),
       ),
       // Products Grid
+
       Expanded(
           child: Container(
-        padding: const EdgeInsets.all(10),
         color: FlutterFlowTheme.of(context).primaryBackground,
-        margin: const EdgeInsets.fromLTRB(24, 20, 24, 0),
-        child: Expanded(
-            child: GridView.builder(
+        padding: const EdgeInsets.all(14),
+        margin: const EdgeInsets.fromLTRB(24, 18, 24, 0),
+        child: GridView.builder(
           padding: const EdgeInsets.only(bottom: 100),
           shrinkWrap: true,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -208,7 +208,7 @@ class _ProductsGridState extends State<ProductsGrid> {
                   )),
             );
           },
-        )),
+        ),
       )),
     ]);
   }
