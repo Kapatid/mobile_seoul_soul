@@ -102,7 +102,13 @@ class _CartPageState extends State<CartPage> {
                               ]));
                 }),
           )),
-          const Spacer(),
+          Container(
+            margin: const EdgeInsets.only(bottom: 10, left: 20, right: 20),
+            alignment: Alignment.centerLeft,
+            child: const Text("ORDER SUMMARY", style:TextStyle(color: Color.fromARGB(255, 14, 13, 13)),),
+          ),
+
+          const Divider(),
           Container(
             margin: const EdgeInsets.only(bottom: 120, left: 20, right: 20),
             child: Column(
@@ -113,7 +119,7 @@ class _CartPageState extends State<CartPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text("Sub Total",
-                          style: TextStyle(color: Colors.grey)),
+                          style: TextStyle(color: Color.fromARGB(255, 14, 13, 13))),
                       Text(
                         _fc.format(_cart.isNotEmpty ? _subTotal : 0),
                         style: const TextStyle(
@@ -128,7 +134,7 @@ class _CartPageState extends State<CartPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text("Shipping",
-                          style: TextStyle(color: Colors.grey)),
+                          style: TextStyle(color: Color.fromARGB(255, 14, 13, 13))),
                       Text(
                         _fc.format(_cart.isNotEmpty ? _shipping : 0),
                         style: const TextStyle(
@@ -142,7 +148,7 @@ class _CartPageState extends State<CartPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text("Tax", style: TextStyle(color: Colors.grey)),
+                      const Text("Tax", style: TextStyle(color: Color.fromARGB(255, 14, 13, 13))),
                       Text(
                         _fc.format(_cart.isNotEmpty ? _tax : 0),
                         style: const TextStyle(
@@ -158,16 +164,16 @@ class _CartPageState extends State<CartPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        "Total",
+                        "TOTAL COST",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w900),
+                            fontSize: 15, fontWeight: FontWeight.w500),
                       ),
                       Text(
                         _fc.format(_cart.isNotEmpty
                             ? _subTotal + _shipping + _tax
                             : 0),
                         style: const TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             fontFamily: "Roboto",
                             fontWeight: FontWeight.bold),
                       )
