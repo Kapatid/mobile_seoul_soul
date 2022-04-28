@@ -33,21 +33,21 @@ class ProductsGrid extends StatefulWidget {
 
 class _ProductsGridState extends State<ProductsGrid> {
   final List<Product> _productList = [
-    Product("2cFZ_FB08UM", "Digital Watch", 500.00),
-    Product("KsLPTsYaqIQ", "One Step 2", 1000.0),
-    Product("ZtxED1cpB1E", "Wireless Mouse", 2000.0),
-    Product("dUx0gwLbhzs", "Playstation", 14000.0),
-    Product("mwytIca3qNA", "Playstation Controller", 4000.0),
-    Product("IJjfPInzmdk", "Puma Sneakers", 6000.0),
-    Product("rI2MXeP6sss", "Airpods", 5000.0),
-    Product("cOJgO4Zzs-w", "Nike Shoes", 16000.0),
-    Product("WCbHuYngg44", "Watch", 20000.0),
-    Product("pHqt1DsHCx0", "Marshal Headphones", 15000.0),
-    Product("y4Atz4olpAQ", "FOSSIL Watch", 39000.0),
-    Product("Rux50ySjahc", "Nikon Camera", 3000.0),
-    Product("DGyTUaS6_aw", "GoPro", 18000.0),
-    Product("LtDXRSnNBe0", "Drone", 12000.0),
-    Product("aWPsyb7-KBQ", "G Fuel", 1000.0),
+    Product("MEsWk-dZzlI", "Enhypen Perfume", 500.00, "JOKE JOKE JOKE"),
+    Product("nwOip8AOZz0", "BTS Cleanser Kit", 1000.0, "JOKE JOKE JOKE"),
+    Product("dwKiHoqqxk8", "Loona Kicks", 2000.0, "JOKE JOKE JOKE"),
+    Product("dcbz31jdsHA", "Twice Lipstick", 14000.0, "JOKE JOKE JOKE"),
+    Product("mwytIca3qNA", "BTS PS5 Controller", 4000.0, "JOKE JOKE JOKE"),
+    Product("E-0ON3VGrBc", "IZ*ONE Stiletto", 6000.0, "JOKE JOKE JOKE"),
+    Product("cxAZxTuL7Sk", "Astro Scented Soap", 5000.0, "JOKE JOKE JOKE"),
+    Product("0FHNXqyqgg4", "SF9 Diffuser", 16000.0, "JOKE JOKE JOKE"),
+    Product("HcqA34-uWo4", "CIX Sneakers", 20000.0, "JOKE JOKE JOKE"),
+    Product("TBH2MLpqT0E", "Mamamoo Perfume", 15000.0, "JOKE JOKE JOKE"),
+    Product("t17J7UAdhOA", "Seventeen Nail Polish", 39000.0, "JOKE JOKE JOKE"),
+    Product("_h-wpskIzfw", "GFriend Lipstick", 3000.0, "JOKE JOKE JOKE"),
+    Product("3_KYuMVl1Q8", "BTS Lotion", 18000.0, "JOKE JOKE JOKE"),
+    Product("oWLAP7fgcKM", "Kang Daniel Watch", 12000.0, "JOKE JOKE JOKE"),
+    Product("P1DnHl3qYFk", "BTS Bomb Pin", 1000.0, "JOKE JOKE JOKE"),
   ];
   List<Product> _searchList = [];
 
@@ -149,7 +149,7 @@ class _ProductsGridState extends State<ProductsGrid> {
                             placeholder: (context, url) => const Center(
                                   child: SizedBox(
                                     width: 30.0,
-                                    height: 60.0,
+                                    height: 100.0,
                                     child: CircularProgressIndicator(),
                                   ),
                                 ),
