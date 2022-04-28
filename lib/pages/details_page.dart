@@ -69,11 +69,11 @@ class DetailsPage extends StatelessWidget {
                       color: Colors.grey[350],
                       margin: const EdgeInsets.only(top: 18, bottom: 14),
                     ),
-                    const Align(
+                    Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          "Sit nulla elitr voluptua consequat takimata ad kasd diam dolor amet sanctus kasd. Dolores gubergren vel ut sadipscing ut no. Tempor ullamcorper lorem dolore ut consetetur dolores elitr sadipscing justo dolores minim rebum gubergren justo nostrud voluptua diam et.re",
-                          style: TextStyle(
+                          product.description,
+                          style: const TextStyle(
                             fontSize: 12,
                           ),
                         )),

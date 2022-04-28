@@ -33,21 +33,21 @@ class ProductsGrid extends StatefulWidget {
 
 class _ProductsGridState extends State<ProductsGrid> {
   final List<Product> _productList = [
-    Product("2cFZ_FB08UM", "Digital Watch", 500.00),
-    Product("KsLPTsYaqIQ", "One Step 2", 1000.0),
-    Product("ZtxED1cpB1E", "Wireless Mouse", 2000.0),
-    Product("dUx0gwLbhzs", "Playstation", 14000.0),
-    Product("mwytIca3qNA", "Playstation Controller", 4000.0),
-    Product("IJjfPInzmdk", "Puma Sneakers", 6000.0),
-    Product("rI2MXeP6sss", "Airpods", 5000.0),
-    Product("cOJgO4Zzs-w", "Nike Shoes", 16000.0),
-    Product("WCbHuYngg44", "Watch", 20000.0),
-    Product("pHqt1DsHCx0", "Marshal Headphones", 15000.0),
-    Product("y4Atz4olpAQ", "FOSSIL Watch", 39000.0),
-    Product("Rux50ySjahc", "Nikon Camera", 3000.0),
-    Product("DGyTUaS6_aw", "GoPro", 18000.0),
-    Product("LtDXRSnNBe0", "Drone", 12000.0),
-    Product("aWPsyb7-KBQ", "G Fuel", 1000.0),
+    Product("MEsWk-dZzlI", "Enhypen Perfume", 500.00, "Enhypen Limited Edition Perfume - 2021 Edition from the album DIMENSION: DILEMMA, Perfume worn by Enhypen Members in their collaboration with Perfume Company Carthusia."),
+    Product("nwOip8AOZz0", "BTS Cleanser Kit", 1000.0, "BTS Cleanser Kit - BTS Collaborated with Curology in creating the cleanser kit that was advertised by Jimin and J-Hope."),
+    Product("dwKiHoqqxk8", "Loona Kicks", 2000.0, "2021 Edition Loona Kicks - In partnership with Hummel, Loona launched her 2021 sneakers that she publicly announced back on her 2020 grand concert."),
+    Product("dcbz31jdsHA", "Twice Lipstick", 14000.0, "Twice Lipstick - The Official Lipstick Merchandise of Twice, released in 2017 by JYP Entertainment in Korea, and worldwide in 2020"),
+    Product("mwytIca3qNA", "BTS PS5 Controller", 4000.0, "BTS PS5 Controller Limited Edition Skin - BTS and Sony collaboration with the new PS5 controller skin 2021 edition"),
+    Product("E-0ON3VGrBc", "IZ*ONE Stiletto", 6000.0, "IZ*ONE Designer Stiletto (Christian Louboutin) - IZ*ONE partnered with world renowned designer brand of Christian Louboutin to create the 2018 Stiletto Heels"),
+    Product("cxAZxTuL7Sk", "Astro Scented Soap", 5000.0, "Astro Assorted Scented Soap - Astro merchandised body cleaning materials in 2022, in collaboration with the Dove to create these Soaps"),
+    Product("0FHNXqyqgg4", "SF9 Diffuser", 16000.0, "SF9 Essential Oil Diffusers - SF9 created essential oils merch in January of 2022, in hopes of showing the possible health benefits of essential oils to their fans."),
+    Product("HcqA34-uWo4", "CIX Sneakers", 20000.0, "CIX Adidas 2nd edition Sneakers - CIX and Adidas came out and announced the creation of the 2nd edition CIX sneakers due to the widespread fame found in the 1st Edition CIX sneakers"),
+    Product("TBH2MLpqT0E", "Mamamoo Perfume", 15000.0, "Mamamoo Reality in Black Perfume 2022 - Mamamoo partnered with Youth-Dew Eau De Parfum when the group released their album Reality in Black, as a fundraiser for breast cancer awareness month back in 2020"),
+    Product("t17J7UAdhOA", "Seventeen Nail Polish", 39000.0, "Seventeen X Colorbar Nail Polish - Seventeen X Colorbar limited edition Nail polish that comes with 12 different colors (red, orange, yellow, chartreuse green, green, spring green, cyan, azure, blue, violet, magenta and rose)"),
+    Product("_h-wpskIzfw", "GFriend Lipstick", 3000.0, "Official GFriend Lipstick - Only sold in Korea. The GFriend Lipstick is a promotional product for their album Walpurgis Night in 2020"),
+    Product("3_KYuMVl1Q8", "BTS Lotion", 18000.0, "BTS Hand & Body Lotion - BTS secured a partnership with CeraVe and created a promotional product for their newest single 'THAT THAT'"),
+    Product("oWLAP7fgcKM", "Kang Daniel Watch", 12000.0, "Kang Daniel Watch - Kang Daniel started his own new brand called Kang, with help from various companies and brands including Rolex, Rolex helped in the creation of this watch for Kang's first ever brand product."),
+    Product("P1DnHl3qYFk", "BTS Bomb Pin", 1000.0, "Official BTS Bomb Pin - BTS's brand 'Bomb', created the pin for a promotional stunt to help their newest TV show 'Bangtan Bomb' and for fans to show support for the group"),
   ];
   List<Product> _searchList = [];
 
@@ -149,7 +149,7 @@ class _ProductsGridState extends State<ProductsGrid> {
                             placeholder: (context, url) => const Center(
                                   child: SizedBox(
                                     width: 30.0,
-                                    height: 60.0,
+                                    height: 100.0,
                                     child: CircularProgressIndicator(),
                                   ),
                                 ),
