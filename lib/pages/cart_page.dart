@@ -51,79 +51,88 @@ class _CartPageState extends State<CartPage> {
       child: Column(
         children: [
           Expanded(
-              child: Container(
-            margin: const EdgeInsets.only(left: 20, right: 20),
-            child: ListView.builder(
-                itemCount: _cart.length,
-                itemBuilder: (context, index) {
-                  return _cart.isEmpty
-                      ? const Text(
-                          "No items in cart...",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w900),
-                        )
-                      : SizedBox(
-                          height: 40,
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(_cart[index].product.name),
-                                Row(
-                                  children: [
-                                    Text(
-                                        '${_fc.format(_cart[index].product.price)}  x${_cart[index].amount}',
-                                        style: const TextStyle(
-                                            fontFamily: "Roboto",
-                                            fontWeight: FontWeight.bold)),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
-                                    OutlinedButton.icon(
-                                      icon: const FaIcon(
-                                        FontAwesomeIcons.trash,
-                                        size: 12,
+              child: _cart.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: _cart.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            padding: const EdgeInsets.all(10),
+                            margin: const EdgeInsets.only(left: 20, right: 20),
+                            height: 50,
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(_cart[index].product.name),
+                                  Row(
+                                    children: [
+                                      Text(
+                                          '${_fc.format(_cart[index].product.price)}  x${_cart[index].amount}',
+                                          style: const TextStyle(
+                                              fontFamily: "Roboto",
+                                              fontWeight: FontWeight.bold)),
+                                      const SizedBox(
+                                        width: 20,
                                       ),
-                                      onPressed: () =>
-                                          _removeProduct(_cart[index]),
-                                      label: const Text(
-                                        'REMOVE',
-                                        style: TextStyle(fontSize: 10),
-                                      ),
-                                      style: OutlinedButton.styleFrom(
-                                          shape: const StadiumBorder(),
-                                          side: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryColor,
-                                              width: 1)),
-                                    )
-                                  ],
-                                )
-                              ]));
-                }),
-          )),
+                                      OutlinedButton.icon(
+                                        icon: const FaIcon(
+                                          FontAwesomeIcons.trash,
+                                          size: 12,
+                                        ),
+                                        onPressed: () =>
+                                            _removeProduct(_cart[index]),
+                                        label: const Text(
+                                          'REMOVE',
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                        style: OutlinedButton.styleFrom(
+                                            shape: const StadiumBorder(),
+                                            side: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryColor,
+                                                width: 1)),
+                                      )
+                                    ],
+                                  )
+                                ]));
+                      })
+                  : Container(
+                      margin: const EdgeInsets.only(top: 40),
+                      child: const Text(
+                        "No items in cart...",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w700),
+                      ),
+                    )),
           Container(
-            margin: const EdgeInsets.only(bottom: 10, left: 20, right: 20),
-            alignment: Alignment.centerLeft,
-            child: const Text("ORDER SUMMARY", style:TextStyle(color: Color.fromARGB(255, 14, 13, 13)),),
-          ),
-
-          const Divider(),
-          Container(
+            color: FlutterFlowTheme.of(context).primaryBackground,
+            padding: const EdgeInsets.all(20),
             margin: const EdgeInsets.only(bottom: 120, left: 20, right: 20),
             child: Column(
               children: [
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text("ORDER SUMMARY",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          fontWeight: FontWeight.w700)),
+                ),
+                const Divider(),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text("Sub Total",
-                          style: TextStyle(color: Color.fromARGB(255, 14, 13, 13))),
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 14, 13, 13))),
                       Text(
                         _fc.format(_cart.isNotEmpty ? _subTotal : 0),
-                        style: const TextStyle(
-                            fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontFamily: "Roboto"),
                       )
                     ],
                   ),
@@ -134,11 +143,11 @@ class _CartPageState extends State<CartPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text("Shipping",
-                          style: TextStyle(color: Color.fromARGB(255, 14, 13, 13))),
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 14, 13, 13))),
                       Text(
                         _fc.format(_cart.isNotEmpty ? _shipping : 0),
-                        style: const TextStyle(
-                            fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontFamily: "Roboto"),
                       )
                     ],
                   ),
@@ -148,11 +157,12 @@ class _CartPageState extends State<CartPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text("Tax", style: TextStyle(color: Color.fromARGB(255, 14, 13, 13))),
+                      const Text("Tax",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 14, 13, 13))),
                       Text(
                         _fc.format(_cart.isNotEmpty ? _tax : 0),
-                        style: const TextStyle(
-                            fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontFamily: "Roboto"),
                       )
                     ],
                   ),
@@ -166,7 +176,7 @@ class _CartPageState extends State<CartPage> {
                       const Text(
                         "TOTAL COST",
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w500),
+                            fontSize: 15, fontWeight: FontWeight.w700),
                       ),
                       Text(
                         _fc.format(_cart.isNotEmpty
