@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       // routes: {
       //   '/details': (context) => DetailsPage(),
       // },
-      title: 'Gallery Design',
+      title: 'Seoul Soul',
       theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
           primarySwatch: Colors.blue,
